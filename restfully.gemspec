@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'restfully/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "restfully"
+  spec.name          = "restfully-lowellmower"
   spec.version       = Restfully::VERSION
   spec.authors       = ["lowellmower"]
   spec.email         = ["lowell.mower@gmail.com"]
