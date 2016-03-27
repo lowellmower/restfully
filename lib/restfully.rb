@@ -13,5 +13,9 @@ module Restfully
 	def self.get url, args = {}
 		Request.get url, args
 	end
-	
+
+	def self.post url, args = {}
+		Request.post url, args
+	end	
+
 end
