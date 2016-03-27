@@ -13,6 +13,21 @@ module Restfully
 		def self.post url, args = {}
 			uri = create_uri url
 			send_request uri: uri, method: __method__, params: args
+		end
+
+		def self.get_stream url, file, args = {}
+			uri = create_uri url
+			File.open(file, 'w') {|f|
+				f.write(self.get uri, args)
+			}
+		end
+
+		def self.post_stream url, file, args = {}
+			uri = create_uri url
+			File.open(file, 'w') {|f|
+				res = self.post uri, args
+				f.write(res.body)
+			}
 		end		
 
 		private
