@@ -9,5 +9,9 @@ module Restfully
 	def self.version
 		Restfully::VERSION
 	end
+
+	def self.get url, args = {}
+		Request.get url, args
+	end
 	
 end
